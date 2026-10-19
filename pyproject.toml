@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "healthcare-ml"
+version = "1.0.0"
+description = "Production-ready Healthcare Machine Learning Platform with FastAPI and Gradio"
+readme = "README.md"
+requires-python = ">=3.14"
+classifiers = [
+    "Programming Language :: Python :: 3.14",
+    "Framework :: FastAPI",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "anyio==4.15.1",
+    "evidently==0.7.23",
+    "fastapi==0.143.0",
+    "httpx==0.28.1",
+    "joblib==1.6.0",
+    "matplotlib==3.11.2",
+    "numpy==2.5.4",
+    "pandas==3.0.6",
+    "Pillow==12.3.0",
+    "pyarrow==26.0.0",
+    "pydantic==2.14.0",
+    "PyJWT==2.15.1",
+    "python-dotenv==1.2.4",
+    "bcrypt==5.0.0",
+    "scikit-learn==1.9.1",
+    "scipy==1.18.1",
+    "seaborn==0.13.2",
+    "uvicorn==0.54.0",
+    "xgboost==3.4.1",
+    "gradio==6.30.0",
+    "shap==0.53.0",
+    "openpyxl==3.1.5",
+    "kagglehub==1.0.2"
+]
+
+[tool.setuptools.packages.find]
+include = ["src*", "api*", "app*"]

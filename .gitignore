@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# python
+__pypackages__/
+.venv/
+venv/
+ENV/
+
+# Environment variables & secrets
+.env
+
+# Streamlit (if applicable)
+.streamlit/secrets.toml
+
+# Database
+*.db
+
+# Models & Weights (usually generated/downloaded, though you can track active_model.json if needed)
+models/
+
+# Temp folder & IDE settings
+healthcare_ml.egg-info/
+__temp_pipreqsnb_folder/
+.vscode/
+.idea/
+
+# OS Specific junk
+.DS_Store
+Thumbs.db
+
+# Python Packaging build outputs
+build/
+dist/
+*.egg-info/
+
+# datasets
+logs/
+processed/
+new/

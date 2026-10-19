@@ -1,0 +1,5 @@
+Feature,Mean_Absolute_SHAP
+stay_duration,0.0680815039570682
+billing_amount,0.03664763007442814
+admission_month,0.018371186205761496
+admission_dayofweek,0.001602555288201274
