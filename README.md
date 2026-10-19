@@ -12,16 +12,16 @@ The primary goal of this predictive intelligence platform is to optimize clinica
 
 ### Key business driver alignment:
 
-Workflow triage automation: By predicting whether incoming test results fall into Normal, Abnormal, or Inconclusive fields, hospital networks can build rule-based routing trees. This ensures that potentially high-risk, Abnormal records are prioritized instantly for rapid medical review.
+**Workflow triage automation:** By predicting whether incoming test results fall into Normal, Abnormal, or Inconclusive fields, hospital networks can build rule-based routing trees. This ensures that potentially high-risk, Abnormal records are prioritized instantly for rapid medical review.
 
 
-Administrative cost reduction: Automated preprocessing safely flags and categorizes routine Normal cases. This significantly minimizes the manual classification overhead required of administrative staff and nurses, allowing them to shift focus to complex patient care.
+**Administrative cost reduction:** Automated preprocessing safely flags and categorizes routine Normal cases. This significantly minimizes the manual classification overhead required of administrative staff and nurses, allowing them to shift focus to complex patient care.
 
 
-Minimizing diagnostic leakage: Identifying Inconclusive cases early flags patients who require immediate scheduling for secondary laboratory screening or diagnostic re-runs before they depart the facility.
+**Minimizing diagnostic leakage:** Identifying Inconclusive cases early flags patients who require immediate scheduling for secondary laboratory screening or diagnostic re-runs before they depart the facility.
 
 
-Data-driven resource allocation: Tracking geographic and localized feature shifts via the automated monitor_model drift dashboard empowers healthcare managers to align clinic staffing and inventory investments against rising Abnormal diagnostic trends.
+**Data-driven resource allocation:** Tracking geographic and localized feature shifts via the automated monitor_model drift dashboard empowers healthcare managers to align clinic staffing and inventory investments against rising Abnormal diagnostic trends.
 
 ---
 ## Project architecture & directory structure
@@ -61,7 +61,10 @@ healthcare-ml/
 │       ├── monitor.py          # Data drift and statistical calculation layer
 │       └── preprocessing.py    # Feature engineering & target encoders
 │
-├── logs/                       # Server connection log storage
+├── .gitignore                  # GIT ignore file
+├── Dockerfile                  # containerization
+├── README.MD                   # Project documentation
+├── for_testing_model.json      # use this dataset for testing the model
 ├── pyproject.toml              # Project configuration profile
 └── requirements.txt            # System dependencies manifest
 
@@ -216,7 +219,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install .
 
 # Add .env to your root folder
-Go to src/experiments and copy the .env. Make necessary changes and add that to your root project folder.
+Go to src/experiments and copy the .env. Make necessary changes and add it to your root project folder.
 
 ```
 
