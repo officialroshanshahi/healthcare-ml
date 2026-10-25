@@ -81,19 +81,19 @@ Not all feature are explained below for that, please consult the notebook/eda.ip
 
 <table>
   <tr>
-    <td><img src="plots\features\admission_type.png" alt="Plot 1" width="100%"></td>
-    <td><img src="plots\features\admission_type.png" alt="Plot 2" width="100%"></td>
+    <td><img src="plots/features/admission_type.png" alt="Plot 1" width="100%"></td>
+    <td><img src="plots/features/admission_type.png" alt="Plot 2" width="100%"></td>
   </tr>
   <tr>
     <td><img src="plots/features/gender.png" alt="Plot 3" width="100%"></td>
-    <td><img src="plots\features\gender_test.png" alt="Plot Data 4" width="100%"></td>
+    <td><img src="plots/features/gender_test.png" alt="Plot Data 4" width="100%"></td>
   </tr>
   <tr>
     <td><img src="plots/features/insurance_provider.png" alt="Plot 5" width="100%"></td>
-    <td><img src="plots\features\stay_duration.png" alt="Plot Data 6" width="100%"></td>
+    <td><img src="plots/features/stay_duration.png" alt="Plot Data 6" width="100%"></td>
   </tr><tr>
-    <td><img src="plots\features\gender_condition.png" alt="Plot 7" width="100%"></td>
-    <td><img src="plots\features\test_results.png" alt="Plot Data 8" width="100%"></td>
+    <td><img src="plots/features/gender_condition.png" alt="Plot 7" width="100%"></td>
+    <td><img src="plots/features/test_results.png" alt="Plot Data 8" width="100%"></td>
   </tr>
 </table>
 
@@ -106,7 +106,7 @@ Not all feature are explained below for that, please consult the notebook/eda.ip
 
 #### Correlation matrix analysis
 
-![Project Screenshot](plots\features\feature_corr_target_optimized.png)
+![Project Screenshot](plots/features/feature_corr_target_optimized.png)
 
 From the plot, it is pretty clear that the dataset is artificial and thus lacks correlation for high accuracy model. Not only that while playing with data i tried different models (more on that later). But, classification model (for test results) with Random Forest Classifier was the best, thus used for production.
 
@@ -129,11 +129,11 @@ I trained both classification and regression model using the given dataset. But 
 
 <table>
   <tr>
-    <td><img src="plots\evaluate\v1\performance_comparison_v1_2026-10-16_13-43-12.png" alt="Plot 1" width="100%"></td>
-    <td><img src="plots\evaluate\v1\pr_curves_v1_2026-10-16_13-43-12.png" alt="Plot 2" width="100%"></td>
+    <td><img src="plots/evaluate/v1/performance_comparison_v1_2026-10-16_13-43-12.png" alt="Plot 1" width="100%"></td>
+    <td><img src="plots/evaluate/v1/pr_curves_v1_2026-10-16_13-43-12.png" alt="Plot 2" width="100%"></td>
   </tr>
   <tr>
-    <td><img src="plots\evaluate\v1\roc_curves_v1_2026-10-18_12-55-54.png" alt="Plot 3" width="100%"></td>
+    <td><img src="plots/evaluate/v1/roc_curves_v1_2026-10-18_12-55-54.png" alt="Plot 3" width="100%"></td>
   </tr>
 </table>
 
@@ -143,30 +143,21 @@ Since this model could only be used in the begining of the patient arrival (i.e.
 
 All in all, everything seems to be pointing toward scraping this model (and dataset) alltogether.
 
+
+
 ### Other models (for classification)
 
-I trained different models: XGBoost, LightGBM, and also Neural Network. Metrics are given below:
+I trained different models: XGBoost, LightGBM, and also Neural Network. (Check eda notebook for more info)
 
-<table>
-  <tr>
-    <td><img src="plots/evaluate/v1/models/new_clf_model_comparison_metrics.png" alt="Plot 1" width="100%"></td>
-    <td><img src="plots\evaluate\v1\models\new_clf_nn_metrics_plot.png" alt="Plot 2" width="100%"></td>
-  </tr>
-</table>
-
-From the plot above, it should be clear why Random Forest Classifier was chosen for production. It is beating every other model in every metrics.
+After checking it there, it should be clear why Random Forest Classifier was chosen for production. It is beating every other model in every metrics.
 
 As for neural network, the reason why it is performing so badly could be that it is too shallow? or hyperparameter are too limiting? or simply dataset is bad for creating machine learning models.
 
+
+
 ### Other models (for regression)
 
-I also trained different models for regression: XGBoost and LightGBM. Metrics are given below:
-
-<table>
-  <tr>
-    <td><img src="plots\evaluate\v1\models\regression_metrics_comparison.png" alt="Plot 1" width="100%"></td>
-  </tr>
-</table>
+I also trained different models for regression: XGBoost and LightGBM. (Check eda notebook for more info)
 
 Given dataset couldn't be used for regression. Sometimes, they perform even worse than selecting at random (i.e. r squared is negative). So, yeah, the dataset couldn't be used for regression.
 
@@ -174,7 +165,7 @@ Given dataset couldn't be used for regression. Sometimes, they perform even wors
 
 ## SHAP metrics for different models
 
-![Project Screenshot](plots\shap\v1\shap.webp)
+![Project Screenshot](plots/shap/v1/shap.webp)
 
 Only those 4 features seem to be important enough for prediction (the most important one or the one that helps prediction the most is billing amount.). Which makes sense since the dataset was mostly encoded features (i.e. they are mostly 0s).
 
